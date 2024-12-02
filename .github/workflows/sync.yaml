@@ -15,5 +15,5 @@ jobs:
 
       - name: Push to Repo B
         run: |
-          git remote add Sample2 https://github.com/ketan1412/Sample2.git
+          git remote set-url Sample2 https://github.com/ketan1412/Sample2.git
           git push --mirror Sample2 https://github.com/ketan1412/Sample2.git
