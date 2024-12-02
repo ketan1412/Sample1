@@ -1,0 +1,19 @@
+name: Sync to Repo B
+
+on:
+  push:
+    branches:
+      - main  # Or the branch you want to sync
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo A
+        uses: actions/checkout@v3
+
+      - name: Push to Repo B
+        run: |
+          git remote add repo-b <URL-of-Repo-B>
+          git push --mirror repo-b
